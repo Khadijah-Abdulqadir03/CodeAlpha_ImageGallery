@@ -108,47 +108,105 @@ body{
 /* Responsive Design for Tablets and Mobile Phones */
 @media screen and (max-width: 768px) {
 
-    /* Gallery information */
+    /* Gallery information and categories */
+    .gallery-info h2 {
+        font-size: 20px;
+        margin: 20px 10px;
+        line-height: 1.4;
+    }
+
     .gallery-info .info-content {
-        flex-wrap: wrap;
-        gap: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
         padding: 0 15px;
+    }
+
+    .info-content .field {
+        display: inline-block;
+        width: fit-content;
+        max-width: 100%;
+        padding: 10px 15px;
+        text-align: center;
+    }
+
+    .info-content p {
+        margin-top: 8px;
+        line-height: 1.5;
+        overflow-wrap: break-word;
     }
 
     /* Main gallery container */
     .gallery-container {
+        width: calc(100% - 20px);
+        max-width: none;
+        margin: 25px auto;
+        padding: 12px;
+        gap: 12px;
         flex-direction: column;
-        width: 95%;
-        padding: 15px;
-        gap: 15px;
+        align-items: stretch;
     }
 
-    /* Small images */
+    /* Small image thumbnails */
     .gallery-container .gallery-small-images {
         width: 100%;
         height: auto;
-        max-height: 150px;
+        max-height: 130px;
         display: flex;
         flex-direction: row;
         overflow-x: auto;
         overflow-y: hidden;
         gap: 10px;
+        flex-shrink: 1;
     }
 
     .gallery-small-images img {
-        width: 100px;
+        width: 120px;
         height: 100px;
-        flex-shrink: 0;
+        flex: 0 0 120px;
         margin-bottom: 0;
     }
 
-    /* Main image */
+    /* Main image preview */
     .gallery-container .rightimage-container {
         width: 100%;
-        height: 350px;
+        height: auto;
+        min-width: 0;
     }
 
     .rightimage-container h3 {
         font-size: 22px;
+        padding: 15px 5px;
+    }
+
+    .rightimage-container img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 350px;
+        object-fit: contain;
+    }
+}
+
+/* Extra-small mobile screens */
+@media screen and (max-width: 360px) {
+
+    .gallery-info h2 {
+        font-size: 18px;
+    }
+
+    .gallery-container {
+        padding: 8px;
+    }
+
+    .gallery-small-images img {
+        width: 100px;
+        flex-basis: 100px;
+        height: 85px;
+    }
+
+    .rightimage-container h3 {
+        font-size: 19px;
     }
 }
