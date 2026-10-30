@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="CodeAlpha_ImageGAllery.css">
+</head>
+<body>
+
+    <div class="gallery-info">
+            <h2>MY GALLERY_THINGS I'VE BUILT</h2>
+            
+         <div class="info-content">
+            <div class="frontend">
+                <a href="#" class="field" id="front-id">Frontend Development</a>
+                <p>From lines of code to pixels on screen.</p>
+            </div>
+
+            <div class="ai">
+                <a href="#" class="field" id="ai-id">AI Assisted Projects</a>
+                <p>Projects I explored with AI as part of my development process.</p>
+            </div>
+
+            <div class="pd">
+                <a href="#" class="field" id="product-id">Product Design</a>
+                <p>Interfaces, wireframes and product concepts I've designed.</p>
+            </div>
+
+         </div>
+             
+    </div>
+
+    <div class="gallery-container">
+
+        <!-- Small images on the left -->
+            <div class="gallery-small-images">
+                <img src="farm-fresh.jpeg" onclick="myFunction(this)">
+                <img src="Program-Counter.jpeg" onclick="myFunction(this)">
+                <img src="item-list.jpeg" onclick="myFunction(this)"> 
+                <img src="KDJ_snack.png" onclick="myFunction(this)">
+                <img src="RELume.png" onclick="myFunction(this)">
+                <img src="Digital_Muslims.png" onclick="myFunction(this)"> 
+                <img src="Food_Delivery.png" onclick="myFunction(this)">
+                <img src="BeTechified1.png" onclick="myFunction(this)">
+                <img src="2BeTechified.png" onclick="myFunction(this)"> 
+                
+            </div>
+
+
+                
+
+        <!-- Right side: preview side-- Large image on the right -->
+        <div class="rightimage-container">
+             <h3>Preview image</h3>
+            <img id="imageBox" src="farm-fresh.jpeg"  alt="Selected image">
+
+        </div>
+
+    </div>
+
+
+   
+        
+    
+        
+    <script src="CodeAlpha_ImageGallery.js"></script>
+    
+</body>
+</html>

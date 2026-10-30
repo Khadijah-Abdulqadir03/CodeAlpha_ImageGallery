@@ -1,0 +1,154 @@
+/*Styling for the websites*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(114, 158, 233);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.gallery-info h2{
+    color: rgb(17, 24, 39);
+    text-shadow: 0 0 5px #ff4d6d;
+    text-align: center;
+    margin: 30px;
+    font-weight: bold;
+}
+.gallery-info .info-content{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.info-content .field{
+    background-color: #dce8f8;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 8px 13px;
+    
+    text-align: center;
+
+    color: rgb(114, 158, 233);
+    font-weight: bold;
+    border: 2px solid #ff4d6d;
+}
+
+.info-content p{
+    color: rgb(17, 24, 39); 
+    margin-top: 10px;
+}
+.gallery-container{
+    max-width: 1000px;
+    width: 90%;
+    display: flex;
+    background-color: rgb(237, 242, 252);
+    gap: 20px;
+    margin: 40px auto;
+    padding: 20px;
+    align-items: flex-start;
+    border: 2px solid #ff4d6d;
+}
+.gallery-container .gallery-small-images{
+    background-color: rgb(114, 158, 233);
+    gap: 15px;
+    width: 280px;
+    height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex-shrink: 0;
+    
+}
+
+.gallery-small-images img{
+    height: 120px;
+    width: 100%;
+    display: block;
+    opacity: 1.6;
+    object-fit: cover;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.gallery-small-images img:hover{
+    opacity: 0.9;
+    transform: scale(1.05);
+    transition: 0.3s;
+    cursor: pointer;
+
+}
+
+.gallery-container .rightimage-container{
+    background-color: rgb(237, 242, 252);
+    flex: 1;
+    min-width: 0;
+    height: 400px;
+    
+}
+.rightimage-container img{
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    
+}
+
+.rightimage-container h3{
+    color: rgb(114, 158, 233);
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+}
+
+
+
+
+
+
+/* Responsive Design for Tablets and Mobile Phones */
+@media screen and (max-width: 768px) {
+
+    /* Gallery information */
+    .gallery-info .info-content {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    /* Main gallery container */
+    .gallery-container {
+        flex-direction: column;
+        width: 95%;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    /* Small images */
+    .gallery-container .gallery-small-images {
+        width: 100%;
+        height: auto;
+        max-height: 150px;
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: hidden;
+        gap: 10px;
+    }
+
+    .gallery-small-images img {
+        width: 100px;
+        height: 100px;
+        flex-shrink: 0;
+        margin-bottom: 0;
+    }
+
+    /* Main image */
+    .gallery-container .rightimage-container {
+        width: 100%;
+        height: 350px;
+    }
+
+    .rightimage-container h3 {
+        font-size: 22px;
+    }
+}
